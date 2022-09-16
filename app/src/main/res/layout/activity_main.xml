@@ -1,0 +1,178 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity"
+     android:background="@color/layoutbg"
+    >
+
+    <androidx.cardview.widget.CardView
+        android:id="@+id/cardView"
+        android:layout_width="321dp"
+        android:layout_height="192dp"
+        android:backgroundTint="@color/cardbg"
+        app:cardCornerRadius="15dp"
+        app:cardElevation="15dp"
+        app:cardMaxElevation="15dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.132">
+
+
+        <TextView
+            android:id="@+id/textWeight"
+            android:layout_width="137dp"
+            android:layout_height="52dp"
+            android:layout_margin="35dp"
+            android:text="Weight"
+            android:textColor="@color/text"
+            android:textSize="30sp" />
+
+        <TextView
+            android:id="@+id/kg"
+            android:layout_width="137dp"
+            android:layout_height="52dp"
+            android:layout_marginLeft="155dp"
+            android:layout_marginTop="90dp"
+            android:text="kg"
+            android:textColor="@color/text"
+            android:textSize="30sp" />
+
+        <EditText
+            android:id="@+id/weightValue"
+            android:layout_width="140dp"
+            android:layout_height="74dp"
+            android:layout_marginLeft="35dp"
+            android:layout_marginTop="75dp"
+            android:ems="10"
+            android:hint="0"
+            android:inputType="number"
+            android:textColor="@color/text"
+            android:textColorHint="@color/text"
+            android:textSize="35sp" />
+    </androidx.cardview.widget.CardView>
+
+    <Button
+
+        android:id="@+id/btnCalculate"
+        android:layout_width="228dp"
+        android:layout_height="68dp"
+        android:backgroundTint="#1F6A6E"
+        android:text="Calculate"
+        android:textColor="#86F4CC"
+        android:textSize="19sp"
+        app:cornerRadius="10dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/cardView2"
+        app:layout_constraintVertical_bias="0.078" />
+
+    <androidx.cardview.widget.CardView
+        android:id="@+id/cardView2"
+        android:layout_width="321dp"
+        android:layout_height="192dp"
+        android:backgroundTint="@color/cardbg"
+        app:cardCornerRadius="15dp"
+        app:cardElevation="15dp"
+        app:cardMaxElevation="15dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/cardView"
+        app:layout_constraintVertical_bias="0.021">
+
+
+        <TextView
+            android:id="@+id/cm"
+            android:layout_width="137dp"
+            android:layout_height="52dp"
+            android:layout_marginLeft="155dp"
+            android:layout_marginTop="90dp"
+            android:text="cm"
+            android:textColor="@color/text"
+            android:textSize="30sp" />
+
+        <EditText
+            android:id="@+id/heightValue"
+            android:layout_width="140dp"
+            android:layout_height="74dp"
+            android:layout_marginLeft="35dp"
+            android:layout_marginTop="75dp"
+            android:ems="10"
+            android:hint="0"
+            android:inputType="number"
+            android:textColor="@color/text"
+            android:textColorHint="@color/text"
+            android:textSize="35sp" />
+
+        <TextView
+            android:id="@+id/textHeight"
+            android:layout_width="137dp"
+            android:layout_height="52dp"
+            android:layout_margin="35dp"
+            android:text="Height"
+            android:textColor="@color/text"
+            android:textSize="30sp" />
+    </androidx.cardview.widget.CardView>
+
+    <androidx.cardview.widget.CardView
+        android:visibility="invisible"
+
+        android:id="@+id/cardView3"
+        android:layout_width="321dp"
+        android:layout_height="192dp"
+        android:backgroundTint="@color/cardbg"
+        app:cardCornerRadius="15dp"
+        app:cardElevation="15dp"
+        app:cardMaxElevation="15dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/btnCalculate"
+        app:layout_constraintVertical_bias="0.222" >
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/tvIndex"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text=""
+                android:textStyle="bold"
+                android:textColor="@color/white"
+                android:textAlignment="center"
+                android:textSize="60sp"
+                />
+
+            <TextView
+                android:id="@+id/tvResult"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text=""
+                android:textSize="40sp"
+                android:textStyle="bold"
+                android:textAlignment="center"
+                android:textColor="#52F11E"
+                />
+
+            <TextView
+                android:id="@+id/tvInfo"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text=""
+                android:textAlignment="center"
+                android:layout_marginTop="8dp"
+                android:textColor="@color/text"
+                android:textSize="20sp" />
+        </LinearLayout>
+    </androidx.cardview.widget.CardView>
+
+</androidx.constraintlayout.widget.ConstraintLayout>
